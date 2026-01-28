@@ -1,3 +1,4 @@
+// Inline-styling för footer
 const myStyle = {
     backgroundColor: "red",
     color: "white",
