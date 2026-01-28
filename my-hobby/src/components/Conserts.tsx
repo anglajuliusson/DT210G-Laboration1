@@ -10,7 +10,7 @@ function Conserts() {
     // Array med konsert-objekt som representerar mitt fritidsintresse
     const consertsArr: Consert[] = [
         { artist: "Håkan Hellström", year: 2015, seen: true },
-        { artist: "Zara Larsson", year: 2025, seen: false },
+        { artist: "Zara Larsson", year: 2025, seen: true },
         { artist: "Ken Ring", year: 2021, seen: true },
         { artist: "Kent", year: 2025, seen: true },
         { artist: "Thomas Stenström", year: 2026, seen: false },
@@ -18,15 +18,15 @@ function Conserts() {
     ]
 
     return (
-        <ul>
+        <ul className="conserts-list">
             {
                 // map används för att dynamiskt skapa en lista baserad på arrayen ovan
                 consertsArr.map((consert, index) => (
-                    <li key={index}>
-                        Artist eller grupp: {consert.artist} <br /> 
-                        År: {consert.year} <br/>
+                    <li className="consert-card" key={index}>
+                        <strong>Artist eller grupp: </strong>{consert.artist} <br /> 
+                        <strong>År: </strong>{consert.year} <br/>
                         {/* if/else för att visa olika text beroende på boolean */}
-                        Sett: {consert.seen ? "Ja" : "Nej"}
+                        <strong>Sett: </strong>{consert.seen ? "Ja" : "Nej"}
                     </li>
                 ))
             }
