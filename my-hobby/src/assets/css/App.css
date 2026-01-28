@@ -13,3 +13,38 @@ html, body {
         font-size: small;
     }
 }
+/* Conserts */
+/* Tar bort standard-list-styling */
+.conserts-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+  /* Varje konsert-kort */
+  .consert-card {
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+  /* Stor skärm – tre i rad */
+  @media (min-width: 1024px) {
+    .conserts-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  /* Mellanstor skärm – två i rad */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .conserts-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  /* Liten skärm – en i rad */
+  @media (max-width: 768px) {
+    .conserts-list {
+      grid-template-columns: 1fr;
+    }
+  }
